@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shaniez Asar</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        /* --- BASIC RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body.body-contact {
+            font-family: "Poppins", sans-serif;
+            background-color: #fdfdfd;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            width: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #0077ff;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            padding: 120px 60px 80px;
+            text-align: center;
+        }
+
+        .contact-content h1 {
+            font-size: 2.5rem;
+            color: #0077ff;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        .contact-content h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            width: 320px;
+            text-align: left;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: #0077ff;
+            margin-right: 15px;
+        }
+
+        .info-text h4 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .info-text a {
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FORM --- */
+        .contact-form {
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form h3 {
+            color: #0077ff;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #0077ff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn-box {
+            text-align: center;
+        }
+
+        .submit-btn {
+            background: #0077ff;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #005dc0;
+        }
+
+        /* --- FOOTER --- */
+        .home-footer {
+            background: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 25px;
+            }
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                border-top: 1px solid #eee;
+            }
+
+            .navbar a {
+                padding: 10px 0;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid #f2f2f2;
+            }
+
+            .navbar a:last-child {
+                border-bottom: none;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body class="body-contact">
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">Shanilove</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+        <div class="contact-content">
+            <h1>We Can Build This Together</h1>
+            <h3>We Give It a Shot!</h3>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div class="info-text">
+                        <h4>EMAIL US</h4>
+                        <a href="mailto:2400723792@mubs.ac.ug?subject=Project Inquiry&body=Hello, I can be available for you at all times.">
+                            2400723792@mubs.ac.ug
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class='bx bx-phone'></i>
+                    <div class="info-text">
+                        <h4>REACH OUT</h4>
+                        <a href="tel:+256751616606">+256 751 616 606</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form">
+                <h3>Let's Chat</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Surname name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Given name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Program of Choice</option>
+                            <option value="web">Tutorials</option>
+                            <option value="design">Let's Learn Now</option>
+                            <option value="consultation">Self Test & Assignments</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea placeholder="Send us a message..." rows="10"></textarea>
+                    </div>
+
+                    <div class="btn-box">
+                        <button type="submit" class="submit-btn">FINISH</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+        <p>&copy; 2025 Shanilove. All rights reserved.</p>
+    </footer>
+</body>
+</html>
